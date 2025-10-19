@@ -1,7 +1,14 @@
 # 🌟 FleksiJob — Platform Pekerjaan Fleksibel untuk Fresh Graduate
 
 FleksiJob adalah landing page interaktif yang dirancang untuk membantu **lulusan baru** menemukan pekerjaan fleksibel dengan **bayaran cepat** dan **tugas sederhana**.  
-Dibangun menggunakan **HTML, CSS, dan JavaScript** dengan tampilan yang modern, responsif, dan mudah dikembangkan menjadi platform job portal nyata.
+Dibangun menggunakan **HTML, CSS, dan JavaScript** dengan tampilan modern, responsif, dan mudah dikembangkan menjadi platform job portal nyata.
+
+---
+
+## 🌐 Live Demo
+
+👉 **Kunjungi proyek langsung di sini:**  
+🔗 [https://fleksijob.netlify.app/](https://fleksijob.netlify.app/)
 
 ---
 
@@ -62,28 +69,28 @@ FleksiJob/
 
 **1. Hero Section**
 
-- CTA utama: _"Bergabung Sekarang & Mulai Kerja!"_
-- Sub CTA: _"Lihat Cara Kerja"_
+> CTA utama: _"Bergabung Sekarang & Mulai Kerja!"_  
+> Sub CTA: _"Lihat Cara Kerja"_
 
 **2. Fitur FleksiJob**
 
-- Remote, Bayar Cepat, dan Untuk Fresh Graduate.
+> Remote, Bayar Cepat, dan Untuk Fresh Graduate.
 
 **3. Cara Kerja**
 
-- Daftar Profil → Pilih Tugas → Kerjakan dan Dapatkan Bayaran.
+> Daftar Profil → Pilih Tugas → Kerjakan dan Dapatkan Bayaran.
 
 **4. Keuntungan**
 
-- Kerja dari rumah, tugas kecil, gaji cepat, dan mudah bagi pemula.
+> Kerja dari rumah, tugas kecil, gaji cepat, dan mudah bagi pemula.
 
 **5. Testimonial Carousel**
 
-- Menampilkan pengalaman nyata pengguna dengan efek transisi halus.
+> Menampilkan pengalaman nyata pengguna dengan efek transisi halus.
 
 **6. Form Email**
 
-- Call-to-action terakhir untuk mendaftar dan mulai bekerja dari rumah.
+> Call-to-action terakhir untuk mendaftar dan mulai bekerja dari rumah.
 
 ---
 
@@ -99,7 +106,7 @@ FleksiJob/
 
 ---
 
-## 💻 Cara Menjalankan Proyek
+## 💻 Cara Menjalankan Proyek Secara Lokal
 
 1. **Clone repository**
    ```bash
@@ -138,7 +145,7 @@ Proyek ini dikembangkan sebagai latihan front-end untuk:
 
 * **Nama:** Fauzi Noorsyabani
 * **Peran:** Front-End Developer & UI Designer
-* **Tools:** VSCode, Live Server, Figma (untuk desain awal)
+* **Tools:** VSCode, Live Server, Netlify, Figma
 
 ---
 
@@ -149,10 +156,11 @@ Silakan kustomisasi sesuai kebutuhan, dengan mencantumkan atribusi ke **FleksiJo
 
 ---
 
-### 🌐 Demo (opsional)
+## 🪄 Link Penting
 
-Jika kamu sudah upload ke GitHub Pages:
-🔗 [https://username.github.io/fleksijob/](https://username.github.io/fleksijob/)
+* 🌐 **Live Demo:** [https://fleksijob.netlify.app/](https://fleksijob.netlify.app/)
+* 💻 **Repository GitHub:** (tambahkan link repositori kamu di sini)
+* 📷 **Preview UI:** (bisa tambahkan screenshot hero section)
 
 ---
 
