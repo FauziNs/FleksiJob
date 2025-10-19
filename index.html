@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+    <link rel="apple-touch-icon" href="images/logo.jpg" />
+    <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
+    <title>Cari Pekerjaan Fleksibel - Fresh Graduate</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <div class="brand">FleksiJob</div>
+        <nav>
+          <a href="#how">Cara Kerja</a>
+          <a href="#benefits">Keuntungan</a>
+          <a href="#testimonials">Testimonial</a>
+          <a class="cta" href="#signup">Bergabung</a>
+          <!-- single color mode toggle: night / light only -->
+          <button
+            id="premium-toggle"
+            class="theme-toggle"
+            aria-pressed="false"
+            title="Ganti mode warna"
+            aria-label="Ganti mode warna"
+          >
+            <img id="mode-icon" src="images/mode-light.png" alt="mode icon" />
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1 class="headline">
+              Cari Pekerjaan Fleksibel dan Dapatkan Penghasilan Cepat?
+            </h1>
+            <p class="subheadline">
+              Kerja dari rumah, tugas kecil, bayar cepat. Cukup dengan skill
+              dasar, kamu bisa mulai langsung!
+            </p>
+
+            <div class="hero-cta">
+              <a href="#signup" class="btn primary" id="cta-join"
+                >Bergabung Sekarang & Mulai Kerja!</a
+              >
+              <a href="#how" class="btn ghost">Lihat Cara Kerja</a>
+              <label
+                for="hero-upload"
+                class="btn ghost"
+                title="Upload Lottie/MP4"
+                >Upload Hero Animation</label
+              >
+              <input id="hero-upload" type="file" accept=".json,video/*" />
+            </div>
+
+            <div class="hero-features">
+              <div class="feature"><span class="icon">💻</span> Remote</div>
+              <div class="feature">
+                <span class="icon">⚡</span> Bayar Cepat
+              </div>
+              <div class="feature">
+                <span class="icon">🧑‍🎓</span> Untuk Fresh Graduate
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="illustration" aria-hidden="true">
+              <!-- Lottie animation (replace src with your preferred animation) -->
+              <lottie-player
+                id="hero-lottie"
+                class="hero-lottie"
+                src="https://assets10.lottiefiles.com/packages/lf20_t24tpvcu.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
+              <!-- hero card removed per request (Tugas Hari Ini cleared) -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confirm Delete modal -->
+      <div
+        id="confirm-modal"
+        class="modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="modal-panel" role="document" tabindex="-1">
+          <h3>Konfirmasi</h3>
+          <p>
+            Apakah Anda yakin ingin menghapus signup terakhir? Aksi ini bisa
+            dibatalkan untuk beberapa saat.
+          </p>
+          <div class="modal-actions">
+            <button id="confirm-yes" class="btn primary">Ya, Hapus</button>
+            <button id="confirm-no" class="btn ghost">Batal</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="pain container" id="pain">
+        <h2 class="section-title">Lulusan Baru dan Bingung Cari Kerja?</h2>
+        <p class="lead">
+          Gak perlu pengalaman panjang. Mulai kerja dengan tugas kecil, bayar
+          cepat, tanpa ribet!
+        </p>
+
+        <div class="pain-grid">
+          <div class="pain-item" data-animate>
+            <div class="icon">💼</div>
+            <h3>Kerja Fleksibel</h3>
+            <p>Tugas sederhana yang bisa kamu kerjakan kapan saja.</p>
+          </div>
+          <div class="pain-item" data-animate>
+            <div class="icon">💸</div>
+            <h3>Gaji Cepat</h3>
+            <p>Bayar langsung setelah tugas selesai—tanpa nunggu lama.</p>
+          </div>
+          <div class="pain-item" data-animate>
+            <div class="icon">🛠️</div>
+            <h3>Mulai dengan Skill Dasar</h3>
+            <p>
+              Skill sederhana seperti entri data, riset, atau desain ringan
+              sudah cukup.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="how container" id="how">
+        <h2 class="section-title">Cara Kerja — Cepat & Sederhana</h2>
+        <p class="lead">
+          Tiga langkah mudah untuk mulai mendapatkan penghasilan dari rumah.
+        </p>
+
+        <div class="steps" id="steps">
+          <div class="step" data-step="1" data-animate>
+            <div class="num">1</div>
+            <h4>Daftar Profil Singkat</h4>
+            <p>
+              Masukkan email dan keterampilan singkat. Kami akan beri tugas yang
+              sesuai.
+            </p>
+          </div>
+          <div class="step" data-step="2" data-animate>
+            <div class="num">2</div>
+            <h4>Pilih Pekerjaan Sederhana</h4>
+            <p>
+              Pilih dari daftar tugas: entri data, riset, desain, dan lain-lain.
+            </p>
+          </div>
+          <div class="step" data-step="3" data-animate>
+            <div class="num">3</div>
+            <h4>Kerjakan & Dapatkan Bayaran</h4>
+            <p>Selesaikan tugas, upload bukti, dan terima pembayaran cepat.</p>
+          </div>
+        </div>
+
+        <div class="interactive-work" aria-hidden="true">
+          <div class="mini-task">
+            <div class="task-title">Entri Data</div>
+            <div class="task-progress">
+              <div class="progress-dot"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits container" id="benefits">
+        <h2 class="section-title">Keuntungan</h2>
+        <div class="benefit-grid">
+          <div class="benefit" data-animate>
+            <div class="icon">🏠</div>
+            <h4>Kerja Fleksibel dari Rumah</h4>
+          </div>
+          <div class="benefit" data-animate>
+            <div class="icon">⚡</div>
+            <h4>Gaji Cepat dan Mudah</h4>
+          </div>
+          <div class="benefit" data-animate>
+            <div class="icon">📝</div>
+            <h4>Tugas Kecil, Tanpa Komitmen Besar</h4>
+          </div>
+          <div class="benefit" data-animate>
+            <div class="icon">🎯</div>
+            <h4>Mulai dengan Skill Dasar</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials container" id="testimonials">
+        <h2 class="section-title">Testimonial</h2>
+        <div
+          class="carousel"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Testimonial carousel"
+        >
+          <button class="carousel-btn prev" aria-label="Sebelumnya">‹</button>
+          <div class="carousel-track">
+            <blockquote class="quote" data-index="0">
+              <p class="quote-text">
+                "Dulu saya bingung cari pekerjaan setelah lulus, sekarang saya
+                bisa dapat uang dari tugas yang bisa diselesaikan dalam sehari.
+                Gak pernah nyangka bisa kerja dari rumah!"
+              </p>
+              <footer class="quote-footer">
+                <strong>Sarah Widodo</strong>
+                <span class="quote-role">Content Writer</span>
+                <span class="quote-location">Jakarta</span>
+              </footer>
+            </blockquote>
+            <blockquote class="quote" data-index="1">
+              <p class="quote-text">
+                "FleksiJob membuka peluang baru buat saya. Sekarang bisa
+                mengerjakan proyek desain sambil kuliah. Penghasilannya lumayan
+                buat tambahan uang saku!"
+              </p>
+              <footer class="quote-footer">
+                <strong>Budi Santoso</strong>
+                <span class="quote-role">Graphic Designer</span>
+                <span class="quote-location">Bandung</span>
+              </footer>
+            </blockquote>
+            <blockquote class="quote" data-index="2">
+              <p class="quote-text">
+                "Platform yang cocok banget buat fresh graduate seperti saya.
+                Bisa mulai dari proyek kecil sambil membangun portfolio.
+                Sekarang sudah punya client tetap!"
+              </p>
+              <footer class="quote-footer">
+                <strong>Anita Putri</strong>
+                <span class="quote-role">Virtual Assistant</span>
+                <span class="quote-location">Surabaya</span>
+              </footer>
+            </blockquote>
+            <blockquote class="quote" data-index="3">
+              <p class="quote-text">
+                "Sebagai lulusan IT, FleksiJob membantu saya mendapat pengalaman
+                nyata. Mulai dari proyek website kecil, sekarang saya handle
+                development untuk beberapa startup!"
+              </p>
+              <footer class="quote-footer">
+                <strong>Rafi Ahmad</strong>
+                <span class="quote-role">Web Developer</span>
+                <span class="quote-location">Yogyakarta</span>
+              </footer>
+            </blockquote>
+            <blockquote class="quote" data-index="4">
+              <p class="quote-text">
+                "Awalnya ragu karena fresh graduate, tapi FleksiJob kasih
+                kesempatan buat belajar sambil kerja. Dari translator freelance,
+                sekarang jadi koordinator tim content international!"
+              </p>
+              <footer class="quote-footer">
+                <strong>Maya Kusuma</strong>
+                <span class="quote-role">Translation Lead</span>
+                <span class="quote-location">Semarang</span>
+              </footer>
+            </blockquote>
+          </div>
+          <button class="carousel-btn next" aria-label="Berikutnya">›</button>
+        </div>
+      </section>
+
+      <section class="social container">
+        <h3>
+          Bergabung dengan Ribuan Fresh Graduate yang Sudah Menemukan Pekerjaan
+          Fleksibel!
+        </h3>
+        <p>Ikuti kami untuk update peluncuran:</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Facebook">📘</a>
+        </div>
+      </section>
+
+      <section class="signup container" id="signup">
+        <div class="signup-card">
+          <h2 class="section-title">
+            Mulai Dapatkan Penghasilan dari Rumah Sekarang!
+          </h2>
+          <p class="lead">
+            Masukkan email Anda dan mulai dapatkan penghasilan pertama!
+          </p>
+
+          <form id="signup-form" class="signup-form">
+            <input type="email" id="email" placeholder="Email kamu" required />
+            <input
+              type="text"
+              id="skills"
+              placeholder="Keterampilan singkat (mis. entri data, desain)"
+              required
+            />
+            <button class="btn primary" type="submit">
+              Daftar Sekarang – Dapatkan Penghasilan Segera
+            </button>
+          </form>
+          <div class="signup-actions">
+            <button id="export-csv" class="btn ghost">
+              Export Signups (CSV)
+              <span id="export-count" class="badge" aria-hidden="true">0</span>
+            </button>
+            <button id="remove-last" class="btn ghost">Hapus Terakhir</button>
+          </div>
+          <p class="small">
+            Kami akan mengirim info peluncuran dan tugas yang sesuai. Tidak ada
+            spam.
+          </p>
+        </div>
+      </section>
+      <!-- Confirmation modal (overlay) -->
+      <div
+        id="modal"
+        class="modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="modal-panel" role="document" tabindex="-1">
+          <button id="modal-x" class="modal-x" aria-label="Tutup">✕</button>
+          <h3>Terima Kasih!</h3>
+          <p>
+            Email kamu sudah kami terima. Kami akan mengirim info peluncuran ke
+            inbox kamu.
+          </p>
+          <div class="modal-actions">
+            <button id="modal-close" class="btn primary">Tutup</button>
+          </div>
+        </div>
+      </div>
+      <!-- Accessible announcer for screen readers -->
+      <div id="aria-live" class="sr-only" aria-live="polite"></div>
+      <!-- Toast container -->
+      <div
+        id="toast"
+        role="status"
+        aria-live="polite"
+        class="toast"
+        aria-hidden="true"
+      ></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-content">
+          <div class="copyright">© 2025 FleksiJob — Untuk Fresh Graduate</div>
+          <div class="footer-links">
+            <a href="#privacy">Kebijakan Privasi</a> ·
+            <a href="#terms">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lottie player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

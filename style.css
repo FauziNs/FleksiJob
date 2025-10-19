@@ -1,0 +1,691 @@
+/* Styles for FleksiJob landing page */
+:root {
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --primary: #0b84ff;
+  --accent: #39b54a;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --glass: rgba(255, 255, 255, 0.7);
+  --max-width: 1100px;
+  --radius: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+.nav {
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  background: transparent;
+  padding: 1rem 0;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+nav a {
+  margin-left: 1rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a.cta {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+}
+
+.hero {
+  padding: 4rem 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2.5rem;
+  align-items: center;
+}
+.headline {
+  font-size: 2.1rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
+}
+.subheadline {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+.hero-cta .btn {
+  margin-right: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11, 132, 255, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(11, 132, 255, 0.2);
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--primary);
+}
+
+.hero-features {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.feature {
+  background: var(--card);
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+}
+.feature .icon {
+  font-size: 1.1rem;
+}
+
+.hero-right .illustration {
+  position: relative;
+  height: 320px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #e9f2ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  opacity: 0.12;
+}
+.card {
+  position: relative;
+  z-index: 2;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+  width: 260px;
+}
+.card-header {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.tasks {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  color: var(--muted);
+}
+/* progress bar removed from hero */
+
+/* empty card state for hero */
+.card-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.card-empty .no-tasks {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+.lead {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.pain-item {
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.pain-item .icon {
+  font-size: 1.8rem;
+}
+.pain-item.show {
+  opacity: 1;
+  transform: none;
+}
+.testimonial-inline {
+  margin-top: 1.25rem;
+  font-style: italic;
+  color: var(--muted);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: all 0.6s ease;
+}
+.testimonial-inline.show {
+  opacity: 1;
+  transform: none;
+}
+
+.how {
+  padding-top: 2rem;
+}
+.steps {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.step {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 1rem;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.step .num {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.step.show {
+  opacity: 1;
+  transform: none;
+}
+
+.interactive-work {
+  margin-top: 1.2rem;
+}
+.mini-task {
+  background: var(--card);
+  padding: 0.75rem;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+}
+.task-progress {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 0.5rem;
+}
+.task-progress .progress-dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 6px 18px rgba(57, 181, 74, 0.18);
+}
+
+/* default position for progress dot (can be animated via JS/CSS) */
+.task-progress .progress-dot {
+  left: 30%;
+  transition: left 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* focus-visible for keyboard users */
+*:focus {
+  outline: none;
+}
+.show-focus *:focus-visible {
+  outline: 3px solid rgba(11, 132, 255, 0.18);
+  border-radius: 6px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.benefit {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.6s ease;
+}
+.benefit .icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.benefit.show {
+  opacity: 1;
+  transform: none;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-btn {
+  background: transparent;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary);
+  z-index: 2;
+  padding: 0 1rem;
+  transition: opacity 0.3s;
+}
+
+.carousel-btn:hover {
+  opacity: 0.7;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.quote {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 2rem;
+  background: var(--card);
+  margin-right: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quote-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text);
+  font-style: italic;
+}
+
+.quote-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.quote-footer strong {
+  color: var(--text);
+}
+
+.quote-role,
+.quote-location {
+  color: var(--muted);
+  position: relative;
+}
+
+.quote-role::after {
+  content: "•";
+  margin-left: 0.75rem;
+  opacity: 0.5;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.signup {
+  padding: 3rem 0;
+}
+.signup-card {
+  background: linear-gradient(180deg, #fff, #f7fbff);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(16, 24, 40, 0.06);
+  text-align: center;
+}
+.signup-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.signup-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e6eefc;
+  width: 260px;
+}
+.signup-form button {
+  min-width: 260px;
+}
+.small {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.footer {
+  padding: 2rem 0;
+  color: var(--muted);
+  background: var(--card);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .pain-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps {
+    flex-direction: column;
+  }
+}
+@media (max-width: 560px) {
+  .headline {
+    font-size: 1.5rem;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .signup-form input {
+    width: 100%;
+  }
+  .signup-form button {
+    width: 100%;
+  }
+}
+
+/* --- Additional UI: Web3 theme, Lottie sizing, toast --- */
+:root {
+  /* web3 variables removed - only night/light themes supported */
+}
+
+/* Lottie player container sizing */
+#hero-lottie,
+.hero-lottie {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  opacity: 0.96;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 0;
+  font-size: 1.05rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+
+.theme-toggle img#mode-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* premium toggle styling */
+#premium-toggle {
+  margin-left: 0.4rem;
+}
+.nav-inner nav button {
+  margin-left: 0.4rem;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.18);
+  transform: translateY(12px);
+  opacity: 0;
+  transition: all 0.28s ease;
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Web3 theme modifier */
+/* .theme-web3 removed - only premium night/light themes remain */
+
+/* Premium Dark/Light theme */
+.theme-premium-dark {
+  --bg: #0b0f1a;
+  --card: #081226;
+  --primary: #8be9d1;
+  --accent: #7c3aed;
+  --text: #e6f7ff;
+}
+.theme-premium-dark .how .step,
+.theme-premium-dark .how .step h4,
+.theme-premium-dark .how .step p {
+  color: #000 !important;
+}
+.theme-premium-light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #6b46c1;
+  --accent: #00b894;
+  --text: #0b1220;
+}
+
+/* confirm modal uses same modal styles; add small spacing tweaks */
+.modal-panel .modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* hidden file input (styled via label) */
+#hero-upload {
+  display: none;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+.modal[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-panel {
+  background: var(--card);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.3);
+}
+.modal-actions {
+  margin-top: 1rem;
+}
+
+/* Export button visibility helper */
+.signup-actions {
+  margin-top: 0.75rem;
+}
+.signup-actions .btn {
+  opacity: 0.9;
+}
+.signup-actions.hidden {
+  display: none;
+}
+/* badge next to export */
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.signup-actions .btn + .btn {
+  margin-left: 0.5rem;
+}
+
+/* Modal focus styles */
+.modal-panel :focus {
+  outline: 2px solid rgba(11, 132, 255, 0.18);
+  border-radius: 6px;
+}
+
+/* modal X button */
+.modal-x {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+/* toast action (undo) */
+.toast-action {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-left: 0.6rem;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
