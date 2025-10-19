@@ -125,46 +125,4 @@ FleksiJob/
      http://127.0.0.1:5500/index.html
      ```
 
-3. **Nikmati tampilan landing page FleksiJob 🎉**
-
----
-
-## 🧑‍💼 Tentang Proyek Ini
-
-Proyek ini dikembangkan sebagai latihan front-end untuk:
-
-* Membuat landing page startup modern
-* Menerapkan interaksi UI dasar dengan JavaScript
-* Melatih keterampilan desain dan layout yang responsif
-
-> “FleksiJob membantu fresh graduate membangun karier dengan cara baru — kerja fleksibel, gaji cepat, tanpa ribet.”
-
----
-
-## ✨ Kontributor
-
-* **Nama:** Fauzi Noorsyabani
-* **Peran:** Front-End Developer & UI Designer
-* **Tools:** VSCode, Live Server, Netlify, Figma
-
----
-
-## 📄 Lisensi
-
-Proyek ini bersifat open-source dan dapat digunakan untuk keperluan belajar atau portofolio pribadi.
-Silakan kustomisasi sesuai kebutuhan, dengan mencantumkan atribusi ke **FleksiJob Project**.
-
----
-
-## 🪄 Link Penting
-
-* 🌐 **Live Demo:** [https://fleksijob.netlify.app/](https://fleksijob.netlify.app/)
-* 💻 **Repository GitHub:** (tambahkan link repositori kamu di sini)
-* 📷 **Preview UI:** (bisa tambahkan screenshot hero section)
-
----
-
-**#FleksiJob — Kerja Fleksibel, Gaji Cepat, Untuk Semua Fresh Graduate**
-
-```
 ````
